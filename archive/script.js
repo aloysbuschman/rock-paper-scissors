@@ -1,12 +1,20 @@
+// Set variables 
+
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+
+let playerScore = 0;
+let computerScore = 0;
+
 const results = {
     win: "You win!",
-    lose: "You lose",
-    tie: "It is a tie"
+    lose: "You lose.",
+    tie: "It is a tie."
 }
 const playerSelectedRock = {
     rock: results.tie,
-    paper: results.lose,
-    scissors: results.win
+    paper: results.lose + " Paper beats Rock",
+    scissors: results.win + " Rock beats Scissors"
 }
 
 const playerSelectedPaper = {
@@ -27,7 +35,6 @@ function getComputerChoice() {
     return selectedOption;
 }
 
-getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
     console.log({playerSelection}, {computerSelection})
@@ -44,7 +51,9 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
+function game() {
+    if ()
 
-playRound(playerSelection, computerSelection);
+}
+
+game();
