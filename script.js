@@ -35,7 +35,6 @@ function playRound(playerSelection, computerSelection) {
         tie: "This round was a tie."
     }
 
-
     switch (playerSelection) {
         case 'rock': 
             result = results.playerSelectedRock[computerSelection];
@@ -58,7 +57,7 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     for (let i = 0; i < 5; i++) {
         computerSelection = getComputerChoice();
-        playerSelection = 'paper'
+        playerSelection = window.prompt('Choose your weapon: rock, paper or scissors')
         playRound(playerSelection, computerSelection);
         console.log({playerScore},{computerScore});
     }
