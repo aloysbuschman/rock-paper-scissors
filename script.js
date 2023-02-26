@@ -1,6 +1,9 @@
+
+// Set variables for the scores 
 let playerScore = 0; 
 let computerScore = 0; 
 
+// Possible result outcomes based on the Player slection 
 const results = {
     playerSelectedRock: {rock: 'tie', paper: 'lose', scissors: 'win'},
     playerSelectedPaper: {rock: 'win', paper: 'tie', scissors: 'lose'},
@@ -15,6 +18,7 @@ function getComputerChoice() {
     return computerChoice;
 }
 
+// Increase score based on the result of playRound()
 function setScore(result) {
     if (result === 'win') {
         playerScore ++
@@ -24,7 +28,7 @@ function setScore(result) {
 }
 
 function playRound(playerSelection, computerSelection) {
-    let result =''
+    let result = ''
     const roundMessages = {
         win: `You won this round ${playerSelection} beats ${computerSelection}!`,
         lose: `Too bad, you lost this round ${computerSelection} beats ${playerSelection}!`,
@@ -49,8 +53,6 @@ function playRound(playerSelection, computerSelection) {
             console.log(roundMessages[result]);
             break;
     }
-
-
 }
 
 function game() {
